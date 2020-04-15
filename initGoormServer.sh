@@ -7,6 +7,9 @@ speedtest-cli --server 4870
 #vnc install and configure
 apt-get install xorg lxde-core tightvncserver firefox -y
 vncserver
+echo "lxterminal &" >> ~/.vnc/xstartup
+echo "/usr/bin/lxsession -s LXDE &" >> ~/.vnc/xstartup
+
 
 #connect vnc and execute commands below
 curl -s -L https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh | bash
